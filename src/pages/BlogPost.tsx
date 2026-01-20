@@ -27,11 +27,26 @@ export default function BlogPost() {
     const load = async () => {
       try {
         const postRes = await fetch(
-          `https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/${slug}.json`,
-          { cache: "no-store" }
-        );
-        const postData = await postRes.json();
-        setPost(postData);
+  `https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/${slug}.json`,
+  { cache: "no-store" }
+);
+
+const htmlContent = await postRes.text();
+
+const indexRes = await fetch(
+  "https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/blogs.json",
+  { cache: "no-store" }
+);
+
+const allPosts = await indexRes.json();
+const meta = allPosts.find((p: any) => p.slug === slug);
+
+if (!meta) throw new Error("No metadata");
+
+setPost({
+  ...meta,
+  content: htmlContent,
+});
       } catch {
         setPost(null);
       }
