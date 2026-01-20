@@ -27,7 +27,7 @@ export default function BlogPost() {
     const load = async () => {
       try {
         const postRes = await fetch(
-          `https://raw.githubusercontent.com/harleensinghmalhotra/landscape1/main/public/blogs/${slug}.json`,
+          `https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/${slug}.json`,
           { cache: "no-store" }
         );
         const postData = await postRes.json();
