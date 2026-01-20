@@ -36,16 +36,15 @@ export default function Contact() {
       .catch(() => console.error("Failed to load site config"));
   }, []);
 
+  // ✅ MATCHES SERVICES PAGE EXACTLY
   const services = [
-    "General Construction",
-    "Home Renovation",
-    "Basement Remodeling",
-    "Kitchen & Bathroom Remodeling",
-    "Flooring Installation",
-    "Drywall & Painting",
-    "Commercial Construction",
-    "Demolition & Site Prep",
-    "Custom Projects",
+    "Commercial & Institutional Construction",
+    "Residential Remodeling",
+    "Drywall & Insulation",
+    "Painting & Wall Covering",
+    "Finish Carpentry",
+    "Janitorial Services",
+    "General Construction Services",
   ];
 
   const validateForm = () => {
@@ -65,7 +64,6 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // ✅ Webhook submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -118,15 +116,15 @@ export default function Contact() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-  <div className="max-w-3xl">
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-      Contact Us
-    </h1>
-    <p className="text-base sm:text-lg md:text-xl text-white/90">
-      Get a free consultation for your residential or commercial construction project in Chicago.
-    </p>
-  </div>
-</div>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+              Contact Us
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-white/90">
+              Get a free consultation for your residential or commercial construction project in Chicago.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* CONTACT */}
@@ -163,7 +161,6 @@ export default function Contact() {
 
           {/* FORM */}
           <div className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl border">
-
             <h2 className="text-3xl font-bold mb-2">Request a Free Quote</h2>
             <p className="text-gray-600 mb-6">
               Tell us about your project and we’ll get back to you within 24 hours.
@@ -176,7 +173,6 @@ export default function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-5">
-
               <input
                 name="name"
                 placeholder="Full Name *"
@@ -230,7 +226,6 @@ export default function Contact() {
               >
                 <Send size={18} /> Send Request
               </button>
-
             </form>
           </div>
         </div>
