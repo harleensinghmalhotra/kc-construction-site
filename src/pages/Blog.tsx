@@ -21,7 +21,8 @@ export default function Blog() {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/blogs.json",
+      "https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/blogs.json?ts=" +
+        Date.now(),
       { cache: "no-store" }
     )
       .then((r) => r.json())
