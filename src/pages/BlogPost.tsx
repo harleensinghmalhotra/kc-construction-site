@@ -17,36 +17,45 @@ interface BlogPost {
 }
 
 export default function BlogPost() {
-  const { slug } = useParams();
+  const { slug } = seeParamsFix();
   const navigate = useNavigate();
 
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!slug) {
+      setPost(null);
+      setLoading(false);
+      return;
+    }
+
     const load = async () => {
       try {
         const postRes = await fetch(
-  `https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/${slug}.json`,
-  { cache: "no-store" }
-);
+          `https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/${slug}.json?ts=${Date.now()}`,
+          { cache: "no-store" }
+        );
 
-const htmlContent = await postRes.text();
+        if (!postRes.ok) throw new Error("Post not found");
 
-const indexRes = await fetch(
-  "https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/blogs.json",
-  { cache: "no-store" }
-);
+        const htmlContent = await postRes.text();
 
-const allPosts = await indexRes.json();
-const meta = allPosts.find((p: any) => p.slug === slug);
+        const indexRes = await fetch(
+          "https://raw.githubusercontent.com/harleensinghmalhotra/kc-construction-site/main/public/content/blogs/blogs.json?ts=" +
+            Date.now(),
+          { cache: "no-store" }
+        );
 
-if (!meta) throw new Error("No metadata");
+        const allPosts = await indexRes.json();
+        const meta = allPosts.find((p: any) => p.slug === slug);
 
-setPost({
-  ...meta,
-  content: htmlContent,
-});
+        if (!meta) throw new Error("No metadata");
+
+        setPost({
+          ...meta,
+          content: htmlContent,
+        });
       } catch {
         setPost(null);
       }
@@ -159,4 +168,10 @@ setPost({
       <Footer />
     </div>
   );
+}
+
+/* ---------- SAFETY ---------- */
+function seeParamsFix() {
+  const params = useParams();
+  return { slug: params.slug || "" };
 }
