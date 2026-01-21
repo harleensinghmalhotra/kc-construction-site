@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* QUICK LINKS */}
-          <div>
+          <div className="lg:pl-10">
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/" className="hover:text-[#681a1e] transition-colors">Home</a></li>
@@ -45,7 +45,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* SERVICES — ORDER MATCHES SERVICES PAGE */}
+          {/* SERVICES */}
           <div>
             <h4 className="text-white font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
@@ -74,7 +74,6 @@ export default function Footer() {
                 Janitorial Services
               </a></li>
 
-              {/* GENERAL ALWAYS LAST */}
               <li><a href="/services#general" className="hover:text-[#681a1e] transition-colors">
                 General Construction Services
               </a></li>
