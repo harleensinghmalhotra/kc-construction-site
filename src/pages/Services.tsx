@@ -113,9 +113,9 @@ export default function Services() {
       image: "/services/janitorial.jpg",
       alt: "Janitorial and post-construction cleaning",
       description:
-        "Professional janitorial and post-construction cleaning services for commercial and institutional facilities.",
+        "Professional janitorial with pre and post-construction cleaning services for commercial and institutional facilities.",
       benefits: [
-        "Post-construction cleanups",
+        "Pre and post-construction cleanups",
         "Commercial facility maintenance",
         "Deep cleaning and sanitation",
         "Scheduled maintenance services"
@@ -255,7 +255,7 @@ export default function Services() {
               Why Choose KC Construction?
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              We deliver the expertise, reliability, and results Chicago property owners demand — whether residential or commercial.
+              We deliver the expertise, reliability, and results Chicago and Cook County property owners demand — whether residential or commercial.
             </p>
           </div>
 
@@ -264,7 +264,7 @@ export default function Services() {
               ["Professional Excellence", "Fully insured for your complete protection and peace of mind."],
               ["Personalized Service", "Direct communication with decision-makers and customized solutions."],
               ["Quality Craftsmanship", "Precision execution on every construction project."],
-              ["Local Expertise", "Deep understanding of Chicago construction standards."]
+              ["Local Expertise", "Deep understanding of Chicago & Cook County construction standards."]
             ].map(([title, text]) => (
               <div key={title} className="bg-white p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-2">{title}</h3>

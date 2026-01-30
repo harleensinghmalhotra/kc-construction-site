@@ -25,7 +25,7 @@ export default function About() {
       icon: Shield,
       title: "Reliability",
       description:
-        "We show up on time, deliver on our promises, and stand behind every project we build."
+        "We show up on time, deliver on our promises, and stand behind every project we complete."
     },
     {
       icon: Award,
@@ -48,12 +48,12 @@ export default function About() {
   ];
 
   const whyChoose = [
-    "Direct owner oversight on every project",
-    "Fully insured with $2M liability coverage",
-    "Residential, commercial, and institutional expertise",
-    "Professional crews and modern equipment",
+    "Over 15 years of hands-on experience",
+    "MBE/WMBE - Certified business",
+    "Commitment to quality and safety",
+    "Reliable and professional service",
     "Clear timelines and transparent pricing",
-    "12-month workmanship warranty"
+    "Client-focused approach"
   ];
 
   return (
@@ -83,13 +83,13 @@ export default function About() {
         className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3"
         style={{ textShadow: "3px 3px 14px rgba(0,0,0,0.95)" }}
       >
-        Meet KC Construction, Chicago’s Dedicated Construction Experts.
+        Meet KC Construction, Chicago and Cook County’s Dedicated Construction Experts.
       </h1>
       <p
         className="text-base sm:text-lg md:text-xl text-white"
         style={{ textShadow: "2px 2px 10px rgba(0,0,0,0.9)" }}
       >
-        Over a decade of hands-on experience transforming residential and commercial properties across the Greater Chicago Area.
+        Over a decade of hands-on experience transforming residential and commercial properties across the Greater Chicago Area and Cook County.
       </p>
     </div>
   </div>
@@ -107,21 +107,15 @@ export default function About() {
 
               <div className="space-y-4 text-gray-700 text-base sm:text-lg">
                 <p>
-                  KC Construction was founded to deliver dependable, high-quality
-                  construction services for homeowners, businesses, and institutions
-                  across Chicago.
+                  KingColeman Construction is a reliable,  results-driven constuctioncompany built on experience, integrity, and quality workmanship.  With over 15 years of industry experience, we provide dependable residential and commercial construction services tailored to meet our clients’ needs.
                 </p>
 
                 <p>
-                  We specialize in commercial construction, residential remodeling,
-                  drywall and insulation, finish carpentry, painting, and general
-                  construction services.
+                  We are proud to be a MBE / WMBE - certified (Woman-and Minority-Owned Business Enterprise), committed to excellence, diversity, and strong community partnerships.  Every project we take-onlarge or small-is approached with careful planning, skilled execution,  and close attention detail.
                 </p>
 
                 <p>
-                  Every project is managed with strict attention to detail, safety,
-                  and craftsmanship. Our clients work with a professional team that
-                  values communication, accountability, and results.
+                  Our team   understands that constructionis more than building structures-it’s about trust, timelines, and delivering work that lasts.  We prioitize clear communication, job-site safety, and completing projects efficiently without compromising quality.
                 </p>
               </div>
             </div>
@@ -216,7 +210,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 
             {[
-              { icon: ShieldCheck, title: "Fully Insured", sub: "$2M Liability Coverage" },
+              { icon: ShieldCheck, title: "Fully Insured", sub: "Liability Coverage Included" },
               { icon: Briefcase, title: "Workers Comp", sub: "Full employee protection" },
               { icon: BadgeCheck, title: "12-Month Warranty", sub: "On all workmanship" },
               { icon: Receipt, title: "Transparent Pricing", sub: "No hidden fees" }
@@ -248,14 +242,44 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-            {whyChoose.map((r, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <CheckCircle className="mt-1" size={20} />
-                <p className="text-lg">{r}</p>
-              </div>
-            ))}
-          </div>
+          <div className="flex justify-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 max-w-4xl w-full">
+
+    {/* LEFT COLUMN */}
+    <div className="space-y-4">
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">Over 15 years of hands-on experience</p>
+      </div>
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">Commitment to quality and safety</p>
+      </div>
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">Clear timelines and transparent pricing</p>
+      </div>
+    </div>
+
+    {/* RIGHT COLUMN */}
+    <div className="space-y-4">
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">MBE/WMBE – Certified business</p>
+      </div>
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">Reliable and professional service</p>
+      </div>
+      <div className="flex items-start gap-3">
+        <CheckCircle className="mt-1" size={20} />
+        <p className="text-lg">Client-focused approach</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
           <div className="text-center mt-12">
             <button

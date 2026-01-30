@@ -26,7 +26,7 @@ export default function Footer() {
             />
             <p className="text-sm leading-relaxed text-gray-400">
               KingColeman Construction provides professional commercial, residential,
-              and institutional construction services across Chicago. We specialize in
+              and institutional construction services across Chicago and Cook County. We specialize in
               renovations, drywall, painting, finish carpentry, janitorial, and full
               construction solutions built on quality, safety, and reliability.
             </p>
@@ -108,8 +108,9 @@ export default function Footer() {
 
             <div className="mt-4">
               <p className="text-white text-sm font-semibold mb-1">Business Hours</p>
-              <p className="text-xs text-gray-400">Mon – Sat: By Appointment</p>
-              <p className="text-xs text-gray-400">Emergency Service Available</p>
+              <p className="text-xs text-gray-400">Mon – Fri: 9:00 AM – 5:00 PM</p>
+              <p className="text-xs text-gray-400">Sat: 9:00 AM – 2:00 PM</p>
+              <p className="text-xs text-gray-400">Sunday: Closed</p>
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@ export default function Footer() {
         {/* SERVICE AREAS */}
         <div className="mt-8 pt-6 border-t border-white/10">
           <p className="text-xs text-center text-gray-400">
-            <span className="text-white font-semibold">Service Areas:</span> Chicago • Oak Park • Cicero • Evanston • Skokie • Des Plaines • Arlington Heights • Naperville • Aurora • Schaumburg
+            <span className="text-white font-semibold">Service Areas:</span> Chicago • Cook County Oak Park • Cicero • Evanston • Skokie • Des Plaines • Arlington Heights • Naperville • Aurora • Schaumburg
           </p>
         </div>
 

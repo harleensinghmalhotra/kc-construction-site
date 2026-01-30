@@ -6,6 +6,7 @@ export default function ServiceAreas() {
 
   const cities = [
     "Chicago",
+    "Cook County",
     "Evanston",
     "Glen Ellyn",
     "Oak Park",
@@ -14,7 +15,6 @@ export default function ServiceAreas() {
     "Oakbrook",
     "Arlington Heights",
     "Des Plaines",
-    "Orland Park",
   ];
 
   return (
@@ -23,10 +23,10 @@ export default function ServiceAreas() {
       <section className="py-20 bg-[#8B3A3A]">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Serving the Greater Chicago Metro Area
+            Serving the Greater Chicago Metro Area and Cook County
           </h2>
           <p className="text-lg mb-12 text-white/90 max-w-3xl mx-auto">
-            Professional services for residential and commercial properties throughout Chicagoland.
+            Professional services for residential and commercial properties throughout Chicagoland and Cook County.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-w-4xl mx-auto">
