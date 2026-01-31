@@ -118,7 +118,7 @@ export default function Footer() {
         {/* SERVICE AREAS */}
         <div className="mt-8 pt-6 border-t border-white/10">
           <p className="text-xs text-center text-gray-400">
-            <span className="text-white font-semibold">Service Areas:</span> Chicago • Cook County Oak Park • Cicero • Evanston • Skokie • Des Plaines • Arlington Heights • Naperville • Aurora • Schaumburg
+            <span className="text-white font-semibold">Service Areas:</span> Chicago • Cook County • Oak Park • Cicero • Evanston • Skokie • Des Plaines • Arlington Heights • Naperville • Aurora • Schaumburg
           </p>
         </div>
 

@@ -107,15 +107,15 @@ export default function About() {
 
               <div className="space-y-4 text-gray-700 text-base sm:text-lg">
                 <p>
-                  KingColeman Construction is a reliable,  results-driven constuctioncompany built on experience, integrity, and quality workmanship.  With over 15 years of industry experience, we provide dependable residential and commercial construction services tailored to meet our clients’ needs.
+                  KingColeman Construction is a reliable,  results-driven constuction company built on experience, integrity, and quality workmanship.  With over 15 years of industry experience, we provide dependable, residential and commercial construction services tailored to meet our clients’ needs.
                 </p>
 
                 <p>
-                  We are proud to be a MBE / WMBE - certified (Woman-and Minority-Owned Business Enterprise), committed to excellence, diversity, and strong community partnerships.  Every project we take-onlarge or small-is approached with careful planning, skilled execution,  and close attention detail.
+                  We are proud to be a MBE / WMBE - certified (Woman-and Minority-Owned Business Enterprise), committed to excellence, diversity, and strong community partnerships.  Every project we take-on large or small-is approached with careful planning, skilled execution,  and close attention detail.
                 </p>
 
                 <p>
-                  Our team   understands that constructionis more than building structures-it’s about trust, timelines, and delivering work that lasts.  We prioitize clear communication, job-site safety, and completing projects efficiently without compromising quality.
+                  Our team   understands that construction is more than building structures-it’s about trust, timelines, and delivering work that lasts.  We prioitize clear communication, job-site safety, and completing projects efficiently without compromising quality.
                 </p>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function About() {
 
             {[
               { icon: ShieldCheck, title: "Fully Insured", sub: "Liability Coverage Included" },
-              { icon: Briefcase, title: "Workers Comp", sub: "Full employee protection" },
+              { icon: Briefcase, title: "Dedicated Professional Team", sub: "Expert craftsmanship and attention to detail" },
               { icon: BadgeCheck, title: "12-Month Warranty", sub: "On all workmanship" },
               { icon: Receipt, title: "Transparent Pricing", sub: "No hidden fees" }
             ].map((b, i) => {
