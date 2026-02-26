@@ -27,13 +27,6 @@ const BUILD_DATE = new Date().toISOString();
 // Service pages to include in sitemap
 const SERVICE_PAGES = [
     "/services",
-    "/services#general",
-    "/services#commercial",
-    "/services#residential",
-    "/services#drywall",
-    "/services#painting",
-    "/services#carpentry",
-    "/services#janitorial",
     "/about",
     "/gallery",
     "/contact",
