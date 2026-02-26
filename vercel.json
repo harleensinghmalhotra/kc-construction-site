@@ -27,11 +27,7 @@
   ],
   "rewrites": [
     {
-      "source": "/blog/:slug",
-      "destination": "/blog/:slug/index.html"
-    },
-    {
-      "source": "/((?!.*\\.).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
