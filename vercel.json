@@ -25,19 +25,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.kingcolemanconstruction.com"
-        }
-      ],
-      "destination": "https://kingcolemanconstruction.com/$1",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
