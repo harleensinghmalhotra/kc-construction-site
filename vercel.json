@@ -1,23 +1,14 @@
 {
   "trailingSlash": false,
   "cleanUrls": true,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
     },
     {
-      "src": "/blog/([^/]+)",
-      "dest": "/blog/$1/index.html",
-      "check": true
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|json))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/((?!blog/).*)",
+      "destination": "/index.html"
     }
   ]
 }
