@@ -69,17 +69,24 @@ export default function Contact() {
     if (!validateForm()) return;
 
     try {
-      await fetch("https://app.10xspeed.in/webhook/FormKC", {
+      const response = await fetch("https://app.10xspeed.in/webhook/FormKC", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-      setTimeout(() => setIsSubmitted(false), 5000);
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+        // Thank you form for 12 seconds
+        setTimeout(() => setIsSubmitted(false), 12000);
+      } else {
+        console.error("Webhook failed with status:", response.status);
+        alert("There was an error submitting your request. Please try again later.");
+      }
     } catch (err) {
       console.error("Webhook failed:", err);
+      alert("There was an error submitting your request. Please check your connection.");
     }
   };
 
@@ -159,74 +166,101 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* FORM */}
-          <div className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl border">
-            <h2 className="text-3xl font-bold mb-2">Request a Free Quote</h2>
-            <p className="text-gray-600 mb-6">
-              Tell us about your project and we’ll get back to you within 24 hours.
-            </p>
-
-            {isSubmitted && (
-              <div className="mb-6 bg-green-100 text-green-800 p-4 rounded-lg">
-                Thank you. Your request has been sent.
+          {/* SUCCESS MESSAGE OR FORM */}
+          <div className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl border min-h-[500px] flex flex-col justify-center">
+            {isSubmitted ? (
+              <div className="text-center animate-in fade-in duration-500">
+                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Send size={40} />
+                </div>
+                <h2 className="text-4xl font-bold mb-4 text-[#681a1e]">Thank You!</h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
+                  Your request has been sent successfully. We appreciate your interest in KC Construction and will get back to you within 24 hours.
+                </p>
+                <div className="flex justify-center items-center gap-2 text-sm text-gray-400">
+                  <Clock size={16} />
+                  <span>This message will close in a few seconds...</span>
+                </div>
               </div>
+            ) : (
+              <>
+                <h2 className="text-3xl font-bold mb-2">Request a Free Quote</h2>
+                <p className="text-gray-600 mb-6">
+                  Tell us about your project and we’ll get back to you within 24 hours.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="space-y-1">
+                    <input
+                      name="name"
+                      placeholder="Full Name *"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full border p-3 rounded-lg ${errors.name ? 'border-red-500 bg-red-50' : ''}`}
+                    />
+                    {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <input
+                        name="email"
+                        placeholder="Email *"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full border p-3 rounded-lg ${errors.email ? 'border-red-500 bg-red-50' : ''}`}
+                      />
+                      {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+                    </div>
+
+                    <div className="space-y-1">
+                      <input
+                        name="phone"
+                        placeholder="Phone *"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className={`w-full border p-3 rounded-lg ${errors.phone ? 'border-red-500 bg-red-50' : ''}`}
+                      />
+                      {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className={`w-full border p-3 rounded-lg ${errors.service ? 'border-red-500 bg-red-50' : ''}`}
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((s, i) => (
+                        <option key={i}>{s}</option>
+                      ))}
+                    </select>
+                    {errors.service && <p className="text-red-500 text-xs">{errors.service}</p>}
+                  </div>
+
+                  <div className="space-y-1">
+                    <textarea
+                      name="message"
+                      rows={6}
+                      placeholder="Tell us about your project..."
+                      value={formData.message}
+                      onChange={handleChange}
+                      className={`w-full border p-3 rounded-lg resize-none ${errors.message ? 'border-red-500 bg-red-50' : ''}`}
+                    />
+                    {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#681a1e] text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all hover:bg-[#4a1215] active:scale-[0.98]"
+                  >
+                    <Send size={18} /> Send Request
+                  </button>
+                </form>
+              </>
             )}
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <input
-                name="name"
-                placeholder="Full Name *"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-              />
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  name="email"
-                  placeholder="Email *"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border p-3 rounded-lg"
-                />
-
-                <input
-                  name="phone"
-                  placeholder="Phone *"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full border p-3 rounded-lg"
-                />
-              </div>
-
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg"
-              >
-                <option value="">Select a service</option>
-                {services.map((s, i) => (
-                  <option key={i}>{s}</option>
-                ))}
-              </select>
-
-              <textarea
-                name="message"
-                rows={6}
-                placeholder="Tell us about your project..."
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full border p-3 rounded-lg resize-none"
-              />
-
-              <button
-                type="submit"
-                className="w-full bg-[#681a1e] text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2"
-              >
-                <Send size={18} /> Send Request
-              </button>
-            </form>
           </div>
         </div>
       </section>
