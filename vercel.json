@@ -31,7 +31,7 @@
       "destination": "/blog/:slug/index.html"
     },
     {
-      "source": "/:path((?!.*\\.).*)",
+      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ]
