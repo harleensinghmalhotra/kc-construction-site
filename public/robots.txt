@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kingcolemanconstruction.com/sitemap.xml
+Sitemap: https://www.kingcolemanconstruction.com/sitemap.xml

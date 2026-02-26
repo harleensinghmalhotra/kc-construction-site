@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
 // ─── SITE CONFIG ────────────────────────────────────────────────────────────
-const DOMAIN = "https://kingcolemanconstruction.com";
+const DOMAIN = "https://www.kingcolemanconstruction.com";
 const BUSINESS_NAME = "King Coleman Construction";
 const LOGO_URL = `${DOMAIN}/images/logo/landingsite_logo.png`;
 const BUILD_DATE = new Date().toISOString();
