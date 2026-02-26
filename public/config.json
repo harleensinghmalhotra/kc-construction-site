@@ -1,0 +1,16 @@
+{
+  "siteInfo": {
+    "phone": "(773) 582-1366",
+    "email": "info@kingcoleman.com",
+    "address": "Chicago, IL",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601",
+    "mapLink": "https://maps.google.com/?q=Chicago,IL",
+    "hours": [
+      "Monday – Friday: 9:00 AM – 5:00 PM",
+      "Saturday: 9:00 AM – 2:00 PM",
+      "Sunday: Closed"
+    ]
+  }
+}
