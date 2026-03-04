@@ -37,11 +37,11 @@ export default function Header() {
         <div className="bg-black text-white text-xs">
           <div className="container mx-auto px-4 py-2 flex items-center gap-6">
             <span className="flex items-center gap-1">
-              <Phone size={12} /> (773) 582-1366
+              <Phone size={12} /> (773) 484-8824
             </span>
 
             <span className="hidden sm:flex items-center gap-1">
-              <Mail size={12} /> info@kingcoleman.com
+              <Mail size={12} /> dking@kingcolemanconstruction.com
             </span>
 
             <span className="hidden sm:flex items-center gap-1 ml-auto">

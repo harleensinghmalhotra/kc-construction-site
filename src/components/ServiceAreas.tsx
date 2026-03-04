@@ -61,11 +61,11 @@ export default function ServiceAreas() {
             </button>
 
             <a
-              href="tel:+17735621366"
+              href="tel:+17734848824"
               className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <Phone size={18} />
-              (773) 562-1366
+              (773) 484-8824
             </a>
           </div>
         </div>

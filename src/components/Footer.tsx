@@ -5,8 +5,8 @@ export default function Footer() {
 
   const info = {
     name: "KingColeman Construction",
-    phone: "(773) 582-1366",
-    email: "info@kingcoleman.com",
+    phone: "(773) 484-8824",
+    email: "dking@kingcolemanconstruction.com",
     address: "Chicago, IL",
   };
 
@@ -93,14 +93,14 @@ export default function Footer() {
 
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-[#681a1e]" />
-                <a href="tel:7735821366" className="hover:text-[#681a1e] transition-colors">
+                <a href="tel:7734848824" className="hover:text-[#681a1e] transition-colors">
                   {info.phone}
                 </a>
               </li>
 
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-[#681a1e]" />
-                <a href="mailto:info@kingcoleman.com" className="hover:text-[#681a1e] transition-colors">
+                <a href="mailto:dking@kingcolemanconstruction.com" className="hover:text-[#681a1e] transition-colors">
                   {info.email}
                 </a>
               </li>

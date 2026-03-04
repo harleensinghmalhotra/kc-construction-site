@@ -5,14 +5,14 @@ export default function TopBar() {
     <div className="top-bar">
       <div className="top-bar__container">
         <div className="top-bar__left">
-          <a href="tel:(773)582-1366" className="top-bar__link">
+          <a href="tel:7734848824" className="top-bar__link">
             <Phone size={14} />
-            <span>(773) 582-1366</span>
+            <span>(773) 484-8824</span>
           </a>
 
-          <a href="mailto:info@kingcoleman.com" className="top-bar__link">
+          <a href="mailto:dking@kingcolemanconstruction.com" className="top-bar__link">
             <Mail size={14} />
-            <span>info@kingcoleman.com</span>
+            <span>dking@kingcolemanconstruction.com</span>
           </a>
         </div>
 

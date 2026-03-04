@@ -63,7 +63,7 @@ npm run preview    # Preview production build
 
 Edit `src/components/ContactCTA.tsx` and `src/components/Footer.tsx`:
 - Phone: (123) 456-7890
-- Email: info@kingcoleman.com
+- Email: dking@kingcolemanconstruction.com
 
 ### Update Hero Image
 
