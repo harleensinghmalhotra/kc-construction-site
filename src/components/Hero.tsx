@@ -15,8 +15,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url(https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920)",
+          backgroundImage: "url(/herohero.jpg)",
         }}
       />
       <div className="hero-overlay" />
@@ -51,7 +50,9 @@ export default function Hero() {
         >
           Full-Service General Construction
           <br />
-          <span className="opacity-90">Commercial · Institutional · Residential</span>
+          <span className="opacity-90">
+            Commercial · Institutional · Residential
+          </span>
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -61,6 +62,7 @@ export default function Hero() {
           >
             View Our Work
           </button>
+
           <button
             onClick={() => navigate("/contact")}
             className="btn-secondary w-full sm:w-auto"
